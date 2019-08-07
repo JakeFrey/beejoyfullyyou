@@ -1,5 +1,21 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
-
-{{outlet}}
+<div class='header'>
+    {{#link-to 'senegence' class='home-link'}}
+        <img src='/assets/logos/text-right.png'/>
+    {{/link-to}}
+    <ul class='menu-options'>
+        {{link-to 'Home' 'senegence'}}
+        {{link-to 'Products' 'products'}}
+        {{link-to 'Contact me' 'arbonne'}}
+    </ul>
+    <ul class='social-media-links'>
+        <a target='_blank' href='https://www.instagram.com/beejoyfullyyou/'>
+            <img src='/assets/icons/ig-logo.png'/>
+        </a>
+        <a target='_blank' href='https://www.facebook.com/janelle.quijano.3'>
+            <img src='/assets/icons/fb-logo.png'/>
+        </a>
+    </ul>
+</div>
+<main class={{mainClassName}}>
+    {{outlet}}
+</main>

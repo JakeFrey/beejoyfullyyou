@@ -1,0 +1,30 @@
+.senegence-page {
+    .about-me {
+        
+    }
+
+    .parallax { 
+        /* The image used */
+        background-image: url('/assets/janelle1.jpg');
+
+        display: flex;
+        /* Set a specific height */
+        height: 500px; 
+
+        /* Create the parallax scrolling effect */
+        background-color: transparent;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        .text-container {
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            color: #333333;
+            text-align: center;
+            font-size: 18px;
+        }
+    }
+}

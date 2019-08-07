@@ -1,0 +1,19 @@
+@import 'ember-burger-menu';
+
+// See if we actually need these
+@import 'ember-bootstrap/functions';
+@import 'ember-bootstrap/variables';
+@import 'ember-bootstrap/mixins';
+@import 'ember-bootstrap/utilities';
+@import 'ember-bootstrap/root';
+@import 'ember-bootstrap/reboot';
+@import 'ember-bootstrap/type';
+@import 'ember-bootstrap/buttons';
+@import 'ember-bootstrap/button-group';
+@import 'ember-bootstrap/bootstrap-grid';
+
+@import "ember-bootstrap/bootstrap";
+
+@import 'pages/application';
+@import 'pages/senegence';
+@import 'pages/products';

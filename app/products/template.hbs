@@ -1,0 +1,11 @@
+<div class='title'>
+    
+</div>
+
+<div class='product-grid'>
+    {{#each productGroupLinks as |productGroup|}}
+        {{#link-to (concat 'products/' productGroup.routeName)}}
+            <img src={{concat '/assets/product-groups/' productGroup.imgUrl}}/>
+        {{/link-to}}
+    {{/each}}
+</div>
