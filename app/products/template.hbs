@@ -8,4 +8,15 @@
             <img src={{concat '/assets/product-groups/' productGroup.imgUrl}}/>
         {{/link-to}}
     {{/each}}
+    {{#each productGroupLinks as |productGroup|}}
+        {{#link-to (concat 'products/' productGroup.routeName)}}
+            {{#if (eq productGroup.routeName 'lipsense')}}
+            <img src='/assets/product-groups/lipsense.png'/>
+            {{else if (eq productGroup.routeName 'shadow-sense')}}
+            <img src='/assets/product-groups/shadow-sense.png'/>
+            {{else}}
+            <img src='/assets/product-groups/cctm.png'/>
+            {{/if}}
+        {{/link-to}}
+    {{/each}}
 </div>
