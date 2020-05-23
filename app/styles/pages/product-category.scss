@@ -1,0 +1,15 @@
+.category {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    h2 {
+        
+    }
+
+    .line {
+        border-top: 1px solid #dbdbdb;
+        margin-bottom: 16px;
+    }
+}

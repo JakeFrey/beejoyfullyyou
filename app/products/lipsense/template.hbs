@@ -1,1 +1,10 @@
-awef
+<div class='category'>
+    <h2>{{category.name}}</h2>
+
+    <p>{{category.description}}</p>
+    <div class='line'></div>
+
+    {{#each category.products as |product|}}
+        <img src='/assets/product-groups/lipsense.png'/>
+    {{/each}}
+</div>

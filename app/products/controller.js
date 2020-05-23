@@ -4,7 +4,7 @@ export default Controller.extend({
 
     /**
 
-    */
+     */
     productGroupLinks: [
         {
             imgUrl: 'lipsense.png',

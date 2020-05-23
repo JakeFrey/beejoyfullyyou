@@ -3,28 +3,48 @@
         
     }
 
-    .parallax { 
-        /* The image used */
-        background-image: url('/assets/janelle1.jpg');
+    .title-section {
+        @extend %scroll-background-image;
 
-        display: flex;
-        /* Set a specific height */
+        background-image: url('background.jpg');
         height: 500px; 
-
-        /* Create the parallax scrolling effect */
-        background-color: transparent;
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
+        opacity: .8;
 
         .text-container {
-            margin: auto;
+            color: white;
             display: flex;
             flex-direction: column;
-            color: #333333;
+            font-family: 'Fjord One', serif;
+            filter: grayscale(1);
+            height: 100%;
+            justify-content: center;
             text-align: center;
-            font-size: 18px;
+
+            .sub-text {
+                font-size: 20px;
+            }
+
+            .title {
+                font-family: 'Alex Brush', cursive;
+                font-size: 90px;
+            }
         }
+
+        .overlay {
+            background-color: black;
+            bottom: 0;
+            left: 0;
+            opacity: .5;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+    }
+
+    .bio-img {
+        @extend %scroll-background-image;
+
+        background-image: url('self-pics/janelle1.jpg');
+        height: 500px;
     }
 }

@@ -1,21 +1,60 @@
-<div class='header'>
-    {{#link-to 'senegence' class='home-link'}}
-        <img src='/assets/logos/text-right.png'/>
-    {{/link-to}}
-    <ul class='menu-options'>
-        {{link-to 'Home' 'senegence'}}
-        {{link-to 'Products' 'products'}}
-        {{link-to 'Contact me' 'arbonne'}}
-    </ul>
-    <ul class='social-media-links'>
-        <a target='_blank' href='https://www.instagram.com/beejoyfullyyou/'>
-            <img src='/assets/icons/ig-logo.png'/>
-        </a>
-        <a target='_blank' href='https://www.facebook.com/janelle.quijano.3'>
-            <img src='/assets/icons/fb-logo.png'/>
-        </a>
-    </ul>
+{{#if mobileScreen}}
+    <div class='side-nav-menu {{if showNavMenu 'show'}}'>
+        <i class='material-icons close-menu-button' {{action (toggle 'showNavMenu' this)}}>clear</i>
+        <ul class='menu-options'>
+            <li {{action 'linkClicked' 'senegence'}}>Home</li>
+            <li {{action 'linkClicked' 'products'}}>Products</li>
+            <li {{action 'linkClicked' 'arbonne'}}>Contact me</li>
+        </ul>
+    </div>
+{{/if}}
+
+{{#if showNavMenu}}
+    <div class='app-overlay' {{action (toggle 'showNavMenu' this)}}></div>
+{{/if}}
+
+<div class='app-container {{if showNavMenu 'lock-screen'}}'>
+    <div class='header'>
+        <div class='content {{if mobileScreen 'mobile'}}'>
+            {{#if mobileScreen}}
+                <div>
+                    <i class='material-icons nav-menu-button' {{action (toggle 'showNavMenu' this)}}>menu</i>
+                </div>
+                {{#link-to 'senegence' class='home-link mobile'}}
+                    <img src='/assets/logos/logo-in-circle.png' height=80px/>
+                {{/link-to}}
+                <ul class='social-media-links'>
+                    <a target='_blank' href='https://www.instagram.com/beejoyfullyyou/'>
+                        <img src='/assets/icons/ig-logo.png'/>
+                    </a>
+                </ul>
+            {{else}}
+                {{#link-to 'senegence' class='home-link'}}
+                    <img src='/assets/logos/logo-text-right.png'/>
+                {{/link-to}}
+                <ul class='menu-options'>
+                    {{link-to 'Home' 'senegence'}}
+                    {{link-to 'Products' 'products'}}
+                    {{link-to 'Contact me' 'arbonne'}}
+                </ul>
+                <ul class='social-media-links'>
+                    <a target='_blank' href='https://www.instagram.com/beejoyfullyyou/'>
+                        <img src='/assets/icons/ig-logo.png'/>
+                    </a>
+                    <!-- <a target='_blank' href='https://www.facebook.com/janelle.quijano.3'> -->
+                    <!--     <img src='/assets/icons/fb-logo.png'/> -->
+                    <!-- </a> -->
+                </ul>
+            {{/if}}
+        </div>
+    </div>
+    <main class={{mainClassName}}>
+        {{outlet}}
+    </main>
+    <div class='footer'>
+        <div class='content'>
+            <div class='copyright'>SeneGence Independent Distributor #657565 &copy;2020 Bee Joyfully You</div>
+            <div class='copyright'>Website by Jacob Frey</div>
+        </div>
+    </div>
 </div>
-<main class={{mainClassName}}>
-    {{outlet}}
-</main>
