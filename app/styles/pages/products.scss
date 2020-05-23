@@ -1,22 +1,15 @@
 .products-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
 
-    .product-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        grid-column-gap: 16px;
-        grid-row-gap: 16px;
-        margin: 24px auto;
-        padding: 0 42px;
-        width: 100%;
+    h2 {
+        
+    }
 
-        img {
-            height: 100%;
-            width: 100%;
-
-            &:hover {
-                filter: brightness(85%);
-                transition: .25s;
-            }
-        }
+    .line {
+        border-top: 1px solid #dbdbdb;
+        margin-bottom: 16px;
     }
 }

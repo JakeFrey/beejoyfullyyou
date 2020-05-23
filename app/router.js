@@ -7,16 +7,12 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
-    this.route('senegence');
+    this.route('home');
 
-    // TODO make these sub routes??
-    this.route('products');
+    this.route('catalog', { path: 'catalog' });
+    this.route('products', { path: '/:type' });
 
-    this.route('products/lipsense');
-    this.route('products/shadow-sense');
-    this.route('products/color-correcting-tinted-moisturizer');
-
-    this.route('arbonne');
+    this.route('contact');
 });
 
 export default Router;

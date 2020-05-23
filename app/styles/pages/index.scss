@@ -1,8 +1,4 @@
-.senegence-page {
-    .about-me {
-        
-    }
-
+.index-page {
     .title-section {
         @extend %scroll-background-image;
 
@@ -41,10 +37,29 @@
         }
     }
 
-    .bio-img {
-        @extend %scroll-background-image;
+    .intro {
+        font-family: 'Exo 2', sans-serif;
+    }
 
-        background-image: url('self-pics/janelle1.jpg');
-        height: 500px;
+    h3 {
+        font-size: 56px;
+        margin-bottom: 48px;
+    }
+
+    h4 {
+        font-size: 32px;
+        margin-bottom: 48px;
+    }
+
+    p {
+        font-size: 20px;
+        padding-bottom: 24px;
+        font-weight: 300;
+    }
+
+    .side-by-side.product {
+        font-family: 'Exo 2', sans-serif;
+        color: $text-color;
+        margin-bottom: 64px;
     }
 }

@@ -1,17 +1,10 @@
-<div class='title'>
-    
-</div>
+<div class='centered-content'>
+    <h2>{{category.name}}</h2>
 
-<div class='product-grid'>
-    {{#each productGroupLinks as |productGroup|}}
-        {{#link-to (concat 'products/' productGroup.routeName)}}
-            {{#if (eq productGroup.routeName 'lipsense')}}
-                <img src='/assets/product-groups/lipsense.png'/>
-            {{else if (eq productGroup.routeName 'shadow-sense')}}
-                <img src='/assets/product-groups/shadow-sense.png'/>
-            {{else}}
-                <img src='/assets/product-groups/cctm.png'/>
-            {{/if}}
-        {{/link-to}}
+    <p>{{category.description}}</p>
+    <div class='line'></div>
+
+    {{#each category.products as |product|}}
+        <img src='/assets/product-groups/lipsense.png'/>
     {{/each}}
 </div>

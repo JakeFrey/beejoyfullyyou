@@ -5,18 +5,14 @@ export default Controller.extend({
     /**
 
      */
-    productGroupLinks: [
-        {
-            imgUrl: 'lipsense.png',
-            routeName: 'lipsense',
-        },
-        {
-            imgUrl: 'shadow-sense.png',
-            routeName: 'shadow-sense',
-        },
-        {
-            imgUrl: 'cctm.png',
-            routeName: 'color-correcting-tinted-moisturizer',
-        },
-    ],
+    category: {
+        name: 'Lipsense',
+        description: 'This is my description. No smudge or budge!',
+        products: [
+            {
+                imgUrl: 'lipsense.png',
+                routeName: 'lipsense',
+            },
+        ],
+    },
 });
