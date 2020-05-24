@@ -12,4 +12,79 @@
         border-top: 1px solid #dbdbdb;
         margin-bottom: 16px;
     }
+
+    .product-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-column-gap: 16px;
+        grid-row-gap: 16px;
+        margin-top: 24px;
+        padding: 0 42px;
+        width: 100%;
+
+        img {
+            cursor: pointer;
+            height: 100%;
+            width: 100%;
+            min-height: 200px;
+
+            &:hover {
+                filter: brightness(85%);
+                transition: .25s;
+            }
+        }
+    }
+
+    // Darken screen when opening nav menu
+    .overlay {
+        animation: fadeIn ease .25s;
+        background-color: black;
+        position: absolute;
+        opacity: .8;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: .8; }
+        }
+    }
+
+    .img-container {
+        z-index: 2;
+
+        .material-icons {
+            position: fixed;
+            font-size: 32px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .clear-button {
+            right: 24px;
+            top: 24px;
+        }
+
+        .back-button {
+            left: 32px;
+            font-size: 48px;
+            top: calc(50% - 24px);
+        }
+
+        .next-button {
+            right: 32px;
+            font-size: 48px;
+            top: calc(50% - 24px);
+        }
+
+        .focus {
+            position: fixed;
+            margin: auto;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
 }

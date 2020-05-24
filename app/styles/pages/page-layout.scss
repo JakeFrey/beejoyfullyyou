@@ -1,0 +1,58 @@
+main {
+    .content-frame {
+        @extend %shadow;
+
+        background-color: $burgandy;
+        margin: 64px 0;
+        padding: 24px 0;
+        width: 100%;
+    }
+
+    .side-by-side {
+        @extend %centered-content;
+
+        align-items: center;
+        color: white;
+        display: grid;
+        grid-column-gap: 64px;
+        grid-row-gap: 16px;
+        grid-template-columns: 1fr 1fr;
+        margin: auto;
+
+        .first {
+            justify-self: end;
+            text-align: end;
+        }
+
+        .last {
+            justify-self: start;
+            text-align: start;
+        }
+
+        img {
+            max-width: 100%;
+        }
+    }
+
+    // This is where we convert to mobile view
+    @media (max-width: (700px)) {
+        .content-frame {
+            margin-top: 32px;
+        }
+
+        .side-by-side {
+            grid-template-columns: 1fr;
+
+            .first,
+            .last {
+                align-self: center;
+                justify-self: center;
+                text-align: center;
+
+                p {
+                    text-align: start;
+                }
+            }
+        }
+    }
+}

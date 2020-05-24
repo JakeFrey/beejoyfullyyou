@@ -12,8 +12,12 @@
 
 @import "ember-bootstrap/bootstrap";
 
+@import 'colors';
 @import 'utils';
+
 @import 'pages/application';
+@import 'pages/page-layout';
+
 @import 'pages/index';
 @import 'pages/catalog';
 @import 'pages/products';

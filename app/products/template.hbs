@@ -4,7 +4,20 @@
     <p>{{category.description}}</p>
     <div class='line'></div>
 
-    {{#each category.products as |product|}}
-        <img src='/assets/product-groups/lipsense.png'/>
-    {{/each}}
+    <div class='product-grid'>
+        {{#each category.products as |product|}}
+        <img src={{concat '/assets/catalog/lipsense/' product.name '.webp'}} {{action set 'activeProduct' product}}/>
+        {{/each}}
+    </div>
 </div>
+
+{{#if activeProduct}}
+    <div class='overlay'></div>
+    <div class='img-container'>
+        <i class='material-icons clear-button' {{action set 'activeProduct' null}}>clear</i>
+
+        <i class='material-icons back-button' {{action 'previousProduct'}}>navigate_before</i>
+        <img class='focus' src={{concat '/assets/catalog/lipsense/' activeProduct.name '.webp'}}/>
+        <i class='material-icons next-button' {{action 'nextProduct'}}>navigate_next</i>
+    </div>
+{{/if}}

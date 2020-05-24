@@ -5,10 +5,14 @@ export default Controller.extend({
     /**
 
      */
-    productGroupLinks: [
+    catalogLinks: [
         {
             imgUrl: 'lipsense.png',
             type: 'lipsense',
+        },
+        {
+            imgUrl: 'glosses.png',
+            type: 'glosses',
         },
         {
             imgUrl: 'shadow-sense.png',
@@ -16,7 +20,19 @@ export default Controller.extend({
         },
         {
             imgUrl: 'cctm.png',
-            type: 'color-correcting-tinted-moisturizer',
+            type: 'cctm',
+        },
+        {
+            imgUrl: 'mascara.png',
+            type: 'mascara',
+        },
+        {
+            imgUrl: 'eye-liner.png',
+            type: 'eyeliner',
+        },
+        {
+            imgUrl: 'blush-sense.jpg',
+            type: 'blush-sense',
         },
     ],
 });
