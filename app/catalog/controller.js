@@ -1,38 +1,16 @@
 import Controller from '@ember/controller';
+import { catalog } from 'beejoyfullyyou/utils/catalog';
 
 export default Controller.extend({
 
     /**
+       Ember overridden method to initialize __.
+       @method init
+       @return {void}
+    */
+    init: function() {
+        this._super(...arguments);
 
-     */
-    catalogLinks: [
-        {
-            imgUrl: 'lipsense.png',
-            type: 'lipsense',
-        },
-        {
-            imgUrl: 'glosses.png',
-            type: 'glosses',
-        },
-        {
-            imgUrl: 'shadow-sense.png',
-            type: 'shadow-sense',
-        },
-        {
-            imgUrl: 'cctm.png',
-            type: 'cctm',
-        },
-        {
-            imgUrl: 'mascara.png',
-            type: 'mascara',
-        },
-        {
-            imgUrl: 'eye-liner.png',
-            type: 'eyeliner',
-        },
-        {
-            imgUrl: 'blush-sense.jpg',
-            type: 'blush-sense',
-        },
-    ],
+        this.set('catalog', catalog);
+    },
 });

@@ -3,9 +3,9 @@
 <!-- </div> -->
 
 <div class='centered-content product-grid'>
-    {{#each catalogLinks as |product|}}
-        {{#link-to 'products' product.type}}
-            <img src={{concat '/assets/catalog/' product.imgUrl}}/>
+    {{#each catalog as |productLine|}}
+        {{#link-to 'products' productLine.name}}
+            <img src={{concat '/assets/catalog/' productLine.mainImage}}/>
         {{/link-to}}
     {{/each}}
 </div>

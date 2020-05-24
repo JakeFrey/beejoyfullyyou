@@ -1,46 +1,31 @@
 import Controller from '@ember/controller';
+import { catalog } from 'beejoyfullyyou/utils/catalog';
 
 export default Controller.extend({
 
-    /**
+    productType: null,
 
-     */
-    category: {
-        name: 'Lipsense',
-        description: 'This is my description. No smudge or budge!',
-        products: [
-            {
-                name: 'bombshell',
-            },
-            {
-                name: 'cappuccino',
-            },
-            {
-                name: 'first_love',
-            },
-            {
-                name: 'nude_pink',
-            },
-        ],
-    },
+    productLine: function() {
+        return catalog.findBy('name', this.get('productType'));
+    }.property('productType'),
 
     activeProduct: null,
 
     actions: {
         previousProduct: function() {
-            const currentIndex = this.get('category.products').indexOf(this.get('activeProduct'));
+            const currentIndex = this.get('productLine.products').indexOf(this.get('activeProduct'));
             const previousProduct = currentIndex === 0 ?
-                  this.get('category.products').objectAt(this.get('category.products').length - 1) :
-                  this.get('category.products').objectAt(currentIndex - 1);
+                  this.get('productLine.products').objectAt(this.get('productLine.products').length - 1) :
+                  this.get('productLine.products').objectAt(currentIndex - 1);
 
             this.set('activeProduct', previousProduct);
         },
 
         nextProduct: function() {
-            const currentIndex = this.get('category.products').indexOf(this.get('activeProduct'));
-            const nextProduct = currentIndex >= this.get('category.products').length - 1 ?
-                  this.get('category.products').objectAt(0) :
-                  this.get('category.products').objectAt(currentIndex + 1);
+            const currentIndex = this.get('productLine.products').indexOf(this.get('activeProduct'));
+            const nextProduct = currentIndex >= this.get('productLine.products').length - 1 ?
+                  this.get('productLine.products').objectAt(0) :
+                  this.get('productLine.products').objectAt(currentIndex + 1);
 
             this.set('activeProduct', nextProduct);
         },
