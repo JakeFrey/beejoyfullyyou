@@ -9,8 +9,20 @@
         width: 100%;
     }
 
-    h2 {
-        
+    .product-info {
+        margin: auto;
+        max-width: 800px;
+
+        h2 {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 64px;
+            margin-top: 120px;
+        }
+
+        .price {
+            font-style: italic;
+        }
     }
 
     .line {
@@ -19,23 +31,9 @@
     }
 
     .product-grid {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(min-content, 500px));
-        grid-column-gap: 16px;
-        grid-row-gap: 16px;
-        margin-top: 24px;
-        padding: 0 42px;
-        width: 100%;
-
-        img {
-            cursor: pointer;
-            max-width: 100%;
-            jusitfy-self: center;
-
-            &:hover {
-                filter: brightness(85%);
-                transition: .25s;
-            }
+        img:hover {
+            filter: brightness(65%);
+            transition: .25s;
         }
     }
 
@@ -57,42 +55,42 @@
     }
 
     .img-container {
+        align-items: center;
+        bottom: 0;
+        display: grid;
+        justify-content: center;
+        grid-column-gap: 16px;
+        grid-template-columns: 10% 80% 10%;
+        left: 0;
+        padding: 16px;
+        position: absolute;
+        right: 0;
+        top: 0;
         z-index: 2;
 
         .material-icons {
-            position: fixed;
             font-size: 32px;
             color: white;
             cursor: pointer;
         }
 
         .clear-button {
+            position: fixed;
             right: 24px;
             top: 24px;
         }
 
-        .back-button {
-            left: 32px;
-            font-size: 48px;
-            top: calc(50% - 24px);
-        }
-
-        .next-button {
-            right: 32px;
-            font-size: 48px;
-            top: calc(50% - 24px);
-        }
-
-        .focus {
-            position: fixed;
+        .focused-img {
             margin: auto;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
+            max-width: 600px;
+            width: 100%;
         }
+    }
 
-        img {
-            max-width: 80%;
+    // First break, go to 2 cols
+    @media (max-width: (1100px)) {
+        .product-grid {
+            grid-template-columns: repeat(2, minmax(min-content, 500px));
         }
     }
 
@@ -103,16 +101,11 @@
         }
 
         .img-container {
-            .back-button {
-                left: 8px;
-                font-size: 24px;
-                top: calc(50% - 12px);
-            }
+            grid-template-columns: 24px 1fr 24px;
 
+            .back-button,
             .next-button {
-                right: 8px;
                 font-size: 24px;
-                top: calc(50% - 12px);
             }
         }
     }

@@ -1,11 +1,19 @@
-<!-- <div class='title'> -->
-    
-<!-- </div> -->
+<div class='centered-content'>
+    <h2>Welcome to SeneGence</h2>
 
-<div class='centered-content product-grid'>
-    {{#each catalog as |productLine|}}
-        {{#link-to 'products' productLine.name}}
-            <img src={{concat '/assets/catalog/' productLine.mainImage}}/>
-        {{/link-to}}
-    {{/each}}
+    <p>All SeneGence<sup>®</sup> products have a “Love It Guarantee” so there’s absolutely no risk to trying them! 
+</p>
+
+    <div class='product-grid'>
+        {{#each catalog as |productLine|}}
+            {{#link-to 'products' productLine.name}}
+                <div class='img-overlay'>
+                    <div class='text'>{{{productLine.mainImageText}}}</div>
+                    <div class='sub text'>by SeneGence</div>
+                </div>
+
+                <img src={{concat '/assets/images/catalog/product_lines/' productLine.mainImage}}/>
+            {{/link-to}}
+        {{/each}}
+    </div>
 </div>

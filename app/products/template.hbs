@@ -1,13 +1,17 @@
 <div class='centered-content'>
-    <h2>{{productLine.title}}</h2>
+    <div class='product-info'>
+        <h2>{{productLine.title}}</h2>
 
-    <p>{{productLine.description}}</p>
+        <p>{{productLine.description}}</p>
+
+        {{#if productLine.price}}<p class='price'>Price: ${{productLine.price}}</p>{{/if}}
+    </div>
     <div class='line'></div>
 
     <div class='product-grid'>
         {{#each productLine.products as |product|}}
-        <img src={{concat '/assets/catalog/' productLine.name '/' product}}
-             {{action set 'activeProduct' product}}/>
+            <img src={{concat '/assets/images/catalog/' productLine.name '/' product}}
+                 {{action set 'activeProduct' product}}/>
         {{/each}}
     </div>
 </div>
@@ -18,7 +22,7 @@
         <i class='material-icons clear-button' {{action set 'activeProduct' null}}>clear</i>
 
         <i class='material-icons back-button' {{action 'previousProduct'}}>navigate_before</i>
-        <img class='focus' src={{concat '/assets/catalog/' productLine.name '/' activeProduct}}/>
+        <img class='focused-img' src={{concat '/assets/images/catalog/' productLine.name '/' activeProduct}}/>
         <i class='material-icons next-button' {{action 'nextProduct'}}>navigate_next</i>
     </div>
 {{/if}}
