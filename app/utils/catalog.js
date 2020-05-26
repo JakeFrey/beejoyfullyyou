@@ -88,7 +88,7 @@ export const catalog = [
         name: 'shadowsense',
         title: 'ShadowSense',
         description: 'Experience gorgeous, long-lasting eye shadow shades. This creme to powder formula can be blended to create incredible and unique looks.',
-        price: 20,
+        price: 22,
         mainImageText: 'ShadowSense',
         mainImage: 'shadowsense.jpg',
         products: [
@@ -113,6 +113,7 @@ export const catalog = [
             'onyx.webp',
             'whisper_pink.webp',
             'pink_frost.webp',
+            'rustic_brown.jpeg',
         ],
     },
     {
@@ -135,7 +136,8 @@ export const catalog = [
     },
     {
         name: 'cctm',
-        title: 'Color Correcting Tinted Moisturizer',
+        title: 'cctm',
+        lowercase: true,
         description: 'Are you ready for magic in a bottle? Enjoy a natural sheer coverage, color correcting benefits and skin protection in one easy step! CCTM works to counteract redness and decrease sun and age spots while offering a shield of sun protection!',
         price: 45,
         mainImageText: 'Color Correcting Tinted Moisturizer',

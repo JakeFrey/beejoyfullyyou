@@ -1,8 +1,21 @@
 .category {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
+    .title {
+        background-image: url('images/catalog/product_lines/catalog_background.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 600px 300px;
+        color: white;
+        padding: 48px 0;
+
+        h2 {
+            font-family: 'Alex Brush';
+            font-size: 64px;
+            font-weight: bold;
+            line-height: 150px;
+            margin: auto;
+            text-align: center;
+        }
+    }
 
     h2 {
         
@@ -11,5 +24,16 @@
     .line {
         border-top: 1px solid #dbdbdb;
         margin-bottom: 16px;
+    }
+
+    // Adjust background
+    @media (max-width: (550px)) {
+        .title {
+            background-size: 400px;
+
+            h2 {
+                font-size: 48px;
+            }
+        }
     }
 }

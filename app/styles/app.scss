@@ -18,6 +18,7 @@
 @import 'pages/application';
 @import 'pages/page-layout';
 
+@import 'pages/about';
 @import 'pages/index';
 @import 'pages/catalog';
 @import 'pages/products';
@@ -25,4 +26,8 @@
 
 body {
     font-family: 'Karla', sans-serif;
+
+    &.noscroll {
+        overflow: hidden;
+    }
 }

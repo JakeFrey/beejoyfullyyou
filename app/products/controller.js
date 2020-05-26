@@ -3,6 +3,10 @@ import { catalog } from 'beejoyfullyyou/utils/catalog';
 
 export default Controller.extend({
 
+    reset: function() {
+        this.set('activeProduct', null);
+    },
+
     productType: null,
 
     productLine: function() {
@@ -10,6 +14,15 @@ export default Controller.extend({
     }.property('productType'),
 
     activeProduct: null,
+
+    disableScroll: function() {
+        if (this.get('activeProduct')) {
+            Ember.$('body').addClass('noscroll');
+        }
+        else {
+            Ember.$('body').removeClass('noscroll');
+        }
+    }.observes('activeProduct'),
 
     actions: {
         previousProduct: function() {

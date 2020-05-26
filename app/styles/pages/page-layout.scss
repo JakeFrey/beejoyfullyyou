@@ -1,4 +1,6 @@
 main {
+    min-height: calc(100vh - #{$header-height} - #{$footer-height});
+
     .content-frame {
         @extend %shadow;
 
@@ -12,12 +14,15 @@ main {
         @extend %centered-content;
 
         align-items: center;
-        color: white;
         display: grid;
         grid-column-gap: 64px;
         grid-row-gap: 16px;
         grid-template-columns: 1fr 1fr;
         margin: auto;
+
+        &.white {
+            color: white;
+        }
 
         .first {
             justify-self: end;
@@ -36,6 +41,8 @@ main {
 
     // This is where we convert to mobile view
     @media (max-width: (700px)) {
+        min-height: calc(100vh - #{$header-height-mobile} - #{$footer-height-mobile});
+
         .content-frame {
             margin-top: 32px;
         }

@@ -11,16 +11,39 @@
 
     .product-info {
         margin: auto;
+        font-size: 20px;
         max-width: 800px;
 
-        h2 {
-            font-size: 48px;
-            font-weight: bold;
-            margin-bottom: 64px;
-            margin-top: 120px;
+        .title {
+            background-image: url('images/catalog/product_lines/catalog_background.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 600px 300px;
+            color: white;
+            display: flex;
+            align-ites: center;
+            height: 210px;
+            padding: 48px 0;
+
+            h2 {
+                font-family: 'Alex Brush';
+                font-size: 64px;
+                font-weight: bold;
+                margin: auto;
+                width: 270px;
+
+                &.lower {
+                    font-size: 100px;
+                }
+            }
+        }
+
+        .product-description {
+            margin: 32px auto;
         }
 
         .price {
+            font-size: 18px;
             font-style: italic;
         }
     }
@@ -41,7 +64,7 @@
     .overlay {
         animation: fadeIn ease .25s;
         background-color: black;
-        position: absolute;
+        position: fixed;
         opacity: .8;
         top: 0;
         bottom: 0;
@@ -63,7 +86,7 @@
         grid-template-columns: 10% 80% 10%;
         left: 0;
         padding: 16px;
-        position: absolute;
+        position: fixed;
         right: 0;
         top: 0;
         z-index: 2;
@@ -72,12 +95,14 @@
             font-size: 32px;
             color: white;
             cursor: pointer;
+            user-select: none;
+            padding: 16px;
         }
 
         .clear-button {
             position: fixed;
-            right: 24px;
-            top: 24px;
+            right: 8px;
+            top: 8px;
         }
 
         .focused-img {
@@ -101,11 +126,27 @@
         }
 
         .img-container {
-            grid-template-columns: 24px 1fr 24px;
+            grid-template-columns: 40px 1fr 40px;
+
 
             .back-button,
             .next-button {
-                font-size: 24px;
+                padding: 4px;
+            }
+        }
+    }
+
+    // Adjust background
+    @media (max-width: (550px)) {
+        .product-info .title {
+            background-size: 400px;
+
+            h2 {
+                font-size: 48px;
+
+                &.lower {
+                    font-size: 64px;
+                }
             }
         }
     }

@@ -1,18 +1,17 @@
-<div class='app-container {{if showNavMenu 'lock-screen'}}'>
+<div class='app-container'>
     {{#if mobileScreen}}
         <div class='side-nav-menu {{if showNavMenu 'show'}}'>
             <i class='material-icons close-menu-button' {{action (toggle 'showNavMenu' this)}}>clear</i>
             <ul class='menu-options'>
                 <li {{action 'linkClicked' 'index'}}>Home</li>
                 <li {{action 'linkClicked' 'catalog'}}>Products</li>
-                <li {{action 'linkClicked' 'contact'}}>Contact me</li>
+                <li {{action 'linkClicked' 'about'}}>About</li>
+                <li {{action 'linkClicked' 'contact'}}>Contact</li>
             </ul>
         </div>
     {{/if}}
 
-    {{#if showNavMenu}}
-        <div class='app-overlay' {{action (toggle 'showNavMenu' this)}}></div>
-    {{/if}}
+    <div class='app-overlay {{if showNavMenu 'active'}}' {{action (toggle 'showNavMenu' this)}}></div>
 
     <div class='header'>
         <div class='content {{if mobileScreen 'mobile'}}'>
@@ -35,7 +34,8 @@
                 <ul class='menu-options'>
                     {{link-to 'Home' 'index'}}
                     {{link-to 'Products' 'catalog'}}
-                    {{link-to 'Contact me' 'contact'}}
+                    {{link-to 'About' 'about'}}
+                    {{link-to 'Contact' 'contact'}}
                 </ul>
                 <ul class='social-media-links'>
                     <a target='_blank' href='https://www.instagram.com/beejoyfullyyou/'>

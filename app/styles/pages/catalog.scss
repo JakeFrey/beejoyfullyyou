@@ -9,11 +9,27 @@
         width: 100%;
     }
 
-    h2 {
-        font-size: 48px;
-        font-weight: bold;
-        margin-bottom: 64px;
-        margin-top: 120px;
+    .title {
+        background-image: url('images/catalog/product_lines/catalog_background.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 600px 300px;
+        color: white;
+        padding: 48px 0;
+
+        h2 {
+            font-family: 'Alex Brush';
+            font-size: 64px;
+            font-weight: bold;
+            margin: auto;
+            width: 270px;
+        }
+    }
+
+    .catalog-description {
+        font-size: 20px;
+        margin: 32px auto;
+        max-width: 600px;
     }
 
     .product-grid a {
@@ -47,6 +63,17 @@
                 .text {
                     color: #ddd;
                 }
+            }
+        }
+    }
+
+    // Adjust background
+    @media (max-width: (550px)) {
+        .title {
+            background-size: 400px;
+
+            h2 {
+                font-size: 48px;
             }
         }
     }
