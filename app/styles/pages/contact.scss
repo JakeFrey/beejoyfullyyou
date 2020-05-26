@@ -1,4 +1,8 @@
-.category {
+.contact-page {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 24px;
+
     .title {
         background-image: url('images/catalog/product_lines/catalog_background.jpg');
         background-position: center;
@@ -17,13 +21,33 @@
         }
     }
 
-    h2 {
-        
+    .line {
+        max-width: 1000px;
     }
 
-    .line {
-        border-top: 1px solid #dbdbdb;
-        margin-bottom: 16px;
+    .side-by-side {
+        margin: 32px auto;
+        max-width: 900px;
+    }
+
+    .link {
+        align-items: center;
+        color: $text-color;
+        display: flex;
+        margin: auto;
+        margin-bottom: 8px;
+        text-decoration: none;
+
+        img,
+        i {
+            font-size: 32px;
+            height: 32px;
+            margin-right: 8px;
+        }
+
+        span {
+            font-size: 24px;
+        }
     }
 
     // Adjust background
@@ -33,6 +57,18 @@
 
             h2 {
                 font-size: 48px;
+            }
+        }
+
+        .link {
+            img,
+            i {
+                font-size: 20px;
+                height: 20px;
+            }
+
+            span {
+                font-size: 16px;
             }
         }
     }

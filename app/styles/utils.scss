@@ -121,3 +121,11 @@ $whiteframe-shadow-z1: 0 3px 1px -2px $box-shadow-umbra-color, 0 2px 2px 0 $box-
         grid-template-columns: minmax(200px, 1fr);
     }
 }
+
+.line {
+    @extend %centered-content;
+
+    border-top: 1px solid #dbdbdb;
+    margin-bottom: 16px;
+    width: calc(100% - 32px);
+}

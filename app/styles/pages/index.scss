@@ -47,7 +47,7 @@
     }
 
     h4 {
-        font-size: 32px;
+        font-size: 28px;
         margin-bottom: 48px;
     }
 
@@ -61,5 +61,9 @@
         font-family: 'Exo 2', sans-serif;
         color: $text-color;
         margin-bottom: 64px;
+    }
+
+    img {
+        max-height: 600px;
     }
 }
