@@ -12,6 +12,8 @@ Router.map(function() {
 
     this.route('contact');
     this.route('about');
+    this.route('links');
+    this.route('give');
 });
 
 export default Router;

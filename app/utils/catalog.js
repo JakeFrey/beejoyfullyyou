@@ -72,7 +72,7 @@ export const catalog = [
         products: [
             'Bouganvilla.jpg',
             'Opal.jpg',
-            'Pink Sand.png',
+            'Pink Sand.jpg',
             'Glossy.jpg',
             'Orchid.jpg',
             'Rose.jpg',
@@ -121,11 +121,11 @@ export const catalog = [
         title: 'LashSense and Liner',
         description: 'Make those eyes pop with our highly pigmented mascara that curls, lengthens, and strengthens your lashes to volumized perfection!',
         mainImageText: 'LashSense and Liner',
-        mainImage: 'mascara.png',
+        mainImage: 'mascara.jpg',
         products: [
             'Black Brown Liquid.jpg',
             'Brown Liner.jpg',
-            'Primer.png',
+            'Primer.jpg',
             'Black Liner.jpg',
             'Gold Eye liner.jpg',
             'Waterproof.webp',
@@ -152,7 +152,7 @@ export const catalog = [
         description: 'Non-smearing, long-lasting, full coverage in a unique formula that gives a beautiful matte finish, skin care, and sun protection.',
         price: 50,
         mainImageText: 'MakeSense Foundation',
-        mainImage: 'foundation.png',
+        mainImage: 'foundation.jpg',
         products: [
             'Adobe.jpg',
             'Creme Beige.jpg',
