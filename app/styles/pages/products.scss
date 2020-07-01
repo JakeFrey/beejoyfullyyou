@@ -1,0 +1,148 @@
+.products-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 24px 0;
+    text-align: center;
+
+    .centered-content {
+        width: 100%;
+    }
+
+    .product-info {
+        margin: auto;
+        font-size: 20px;
+        max-width: 800px;
+
+        .title {
+            background-image: url('images/catalog/product_lines/catalog_background.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 600px 300px;
+            color: white;
+            display: flex;
+            align-ites: center;
+            height: 210px;
+            padding: 48px 0;
+
+            h2 {
+                font-family: 'Alex Brush';
+                font-size: 64px;
+                font-weight: bold;
+                margin: auto;
+                width: 270px;
+
+                &.lower {
+                    font-size: 100px;
+                }
+            }
+        }
+
+        .product-description {
+            margin: 32px auto;
+        }
+
+        .price {
+            font-size: 18px;
+            font-style: italic;
+        }
+    }
+
+    .product-grid {
+        img:hover {
+            filter: brightness(65%);
+            transition: .25s;
+        }
+    }
+
+    // Darken screen when opening nav menu
+    .overlay {
+        animation: fadeIn ease .25s;
+        background-color: black;
+        position: fixed;
+        opacity: .8;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: .8; }
+        }
+    }
+
+    .img-container {
+        align-items: center;
+        bottom: 0;
+        display: grid;
+        justify-content: center;
+        grid-column-gap: 16px;
+        grid-template-columns: 10% 80% 10%;
+        left: 0;
+        padding: 16px;
+        position: fixed;
+        right: 0;
+        top: 0;
+        z-index: 2;
+
+        .material-icons {
+            font-size: 32px;
+            color: white;
+            cursor: pointer;
+            user-select: none;
+            padding: 16px;
+        }
+
+        .clear-button {
+            position: fixed;
+            right: 8px;
+            top: 8px;
+        }
+
+        .focused-img {
+            margin: auto;
+            max-width: 600px;
+            width: 100%;
+        }
+    }
+
+    // First break, go to 2 cols
+    @media (max-width: (1100px)) {
+        .product-grid {
+            grid-template-columns: repeat(2, minmax(min-content, 500px));
+        }
+    }
+
+    // This is where we convert to mobile view
+    @media (max-width: (700px)) {
+        .product-grid {
+            grid-template-columns: minmax(200px, 1fr);
+        }
+
+        .img-container {
+            grid-template-columns: 40px 1fr 40px;
+
+
+            .back-button,
+            .next-button {
+                padding: 4px;
+            }
+        }
+    }
+
+    // Adjust background
+    @media (max-width: (550px)) {
+        .product-info .title {
+            background-size: 400px;
+
+            h2 {
+                font-size: 48px;
+
+                &.lower {
+                    font-size: 64px;
+                }
+            }
+        }
+    }
+}

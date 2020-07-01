@@ -1,0 +1,75 @@
+.contact-page {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 24px;
+
+    .title {
+        background-image: url('images/catalog/product_lines/catalog_background.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 600px 300px;
+        color: white;
+        padding: 48px 0;
+
+        h2 {
+            font-family: 'Alex Brush';
+            font-size: 64px;
+            font-weight: bold;
+            line-height: 150px;
+            margin: auto;
+            text-align: center;
+        }
+    }
+
+    .line {
+        max-width: 1000px;
+    }
+
+    .side-by-side {
+        margin: 32px auto;
+        max-width: 900px;
+    }
+
+    .link {
+        align-items: center;
+        color: $text-color;
+        display: flex;
+        margin: auto;
+        margin-bottom: 8px;
+        text-decoration: none;
+
+        img,
+        i {
+            font-size: 32px;
+            height: 32px;
+            margin-right: 8px;
+        }
+
+        span {
+            font-size: 24px;
+        }
+    }
+
+    // Adjust background
+    @media (max-width: (550px)) {
+        .title {
+            background-size: 400px;
+
+            h2 {
+                font-size: 48px;
+            }
+        }
+
+        .link {
+            img,
+            i {
+                font-size: 20px;
+                height: 20px;
+            }
+
+            span {
+                font-size: 16px;
+            }
+        }
+    }
+}

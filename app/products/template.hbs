@@ -1,0 +1,32 @@
+<div class='centered-content'>
+    <div class='product-info'>
+        <div class='title'>
+            <h2 class={{if productLine.lowercase 'lower'}}>{{productLine.title}}</h2>
+        </div>
+
+        <p class='product-description'>{{productLine.description}}</p>
+
+        {{#if productLine.price}}<p class='price'>Price: ${{productLine.price}}</p>{{/if}}
+    </div>
+    <div class='line'></div>
+
+    <div class='product-grid'>
+        {{#each productLine.products as |product|}}
+            <div class='product'>
+                <img src={{concat '/assets/images/catalog/' productLine.name '/' product}}
+                     {{action set 'activeProduct' product}}/>
+            </div>
+        {{/each}}
+    </div>
+</div>
+
+{{#if activeProduct}}
+    <div class='overlay'></div>
+    <div class='img-container'>
+        <i class='material-icons clear-button' {{action set 'activeProduct' null}}>clear</i>
+
+        <i class='material-icons back-button' {{action 'previousProduct'}}>navigate_before</i>
+        <img class='focused-img' src={{concat '/assets/images/catalog/' productLine.name '/' activeProduct}}/>
+        <i class='material-icons next-button' {{action 'nextProduct'}}>navigate_next</i>
+    </div>
+{{/if}}

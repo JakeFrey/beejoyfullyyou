@@ -1,0 +1,131 @@
+$content-max-width: 1200px;
+$header-height: 112px;
+$footer-height: 92px;
+$header-height-mobile: 104px;
+$footer-height-mobile: 92px;
+
+
+// Shadow
+$shadow-multiplier: .7;
+$shadow-key-umbra-opacity: $shadow-multiplier * .2;
+$shadow-key-penumbra-opacity: $shadow-multiplier * .14;
+$shadow-ambient-shadow-opacity: $shadow-multiplier * .12;
+
+$box-shadow-penumbra-color: rgba(0, 0, 0, $shadow-key-penumbra-opacity);
+$box-shadow-umbra-color: rgba(0, 0, 0, $shadow-key-umbra-opacity);
+$box-shadow-ambient-color: rgba(0, 0, 0, $shadow-ambient-shadow-opacity);
+
+$whiteframe-shadow-z1: 0 3px 1px -2px $box-shadow-umbra-color, 0 2px 2px 0 $box-shadow-penumbra-color, 0 1px 5px 0 $box-shadow-ambient-color !default;
+
+.shadow,
+%shadow {
+    box-shadow: $whiteframe-shadow-z1;
+    box-sizing: border-box;
+}
+
+.scroll-background-image ,
+%scroll-background-image {
+    // Just need to provide an image and height
+
+    /* Create the parallax scrolling effect */
+    position: relative;
+    background-color: transparent;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+// For debugging
+.none {
+    display: none;
+}
+
+.centered-content,
+%centered-content {
+    margin: auto;
+    max-width: $content-max-width;
+    padding: 0 24px;
+}
+
+.bbutton {
+    background-color: $light-grey;
+    border-radius: 4px;
+    color: $text-color;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 8px 12px;
+    transition-duration: .25s;
+
+    &:hover {
+        color: #555;
+        text-decoration: none;
+        background-color: #ccc;
+    }
+
+    &.invert {
+        background-color: $burgandy;
+        color: $white;
+
+        &:hover {
+            background-color: $dark-burgandy;
+            color: #ddd;
+        }
+    }
+}
+
+// Shared styling for aligning catalog and products
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(min-content, 400px));
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+    margin-top: 24px;
+    padding: 0 42px;
+    width: 100%;
+
+    a,
+    .product {
+        position: relative;
+    }
+
+    a::before,
+    .product::before {
+        content: '';
+        display: block;
+        padding-top: 100%;
+    }
+
+    a img,
+    a .img-overlay,
+    .product img {
+        position: absolute;
+        top: 0; left: 0;
+        height: 100%;
+        width: 100%;
+    }
+
+    a img,
+    img {
+        cursor: pointer;
+        max-width: 100%;
+    }
+
+    // First break, go to 2 cols
+    @media (max-width: (1100px)) {
+        grid-template-columns: repeat(2, minmax(min-content, 500px));
+    }
+
+    // This is where we convert to mobile view
+    @media (max-width: (700px)) {
+        grid-template-columns: minmax(200px, 1fr);
+    }
+}
+
+.line {
+    @extend %centered-content;
+
+    border-top: 1px solid #dbdbdb;
+    margin-bottom: 16px;
+    width: calc(100% - 32px);
+}

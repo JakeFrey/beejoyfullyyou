@@ -1,0 +1,87 @@
+.catalog-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 24px 0;
+    text-align: center;
+
+    .centered-content {
+        width: 100%;
+    }
+
+    .title {
+        background-image: url('images/catalog/product_lines/catalog_background.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 600px 300px;
+        color: white;
+        padding: 48px 0;
+
+        h2 {
+            font-family: 'Alex Brush';
+            font-size: 64px;
+            font-weight: bold;
+            margin: auto;
+            width: 270px;
+        }
+    }
+
+    .catalog-description {
+        font-size: 20px;
+        margin: 32px auto;
+        max-width: 600px;
+    }
+
+    .product-grid a {
+        position: relative;
+
+        .img-overlay {
+            background-color: rgba(0, 0, 0, .3);
+            color: $white;
+            display: flex;
+            flex-direction: column;
+            font-size: 32px;
+            font-weight: bold;
+            height: 100%;
+            line-height: 1;
+            justify-content: center;
+            padding: 16px;
+            position: absolute;
+            user-select: none;
+            transition: .25s;
+            width: 100%;
+            z-index: 2;
+
+            .sub {
+                font-size: 16px;
+                margin-top: 12px;
+            }
+
+            &:hover {
+                background-color: rgba(0, 0, 0, .5);
+
+                .text {
+                    color: #ddd;
+                }
+            }
+        }
+    }
+
+    // Adjust background
+    @media (max-width: (550px)) {
+        .title {
+            background-size: 400px;
+
+            h2 {
+                font-size: 48px;
+            }
+        }
+    }
+
+    // Go to single column
+    @media (max-width: (500px)) {
+        .product-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+}

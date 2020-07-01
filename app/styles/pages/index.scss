@@ -1,0 +1,69 @@
+.index-page {
+    .title-section {
+        @extend %scroll-background-image;
+
+        background-image: url('images/utils/index_header_background.jpg');
+        height: 500px; 
+        opacity: .8;
+
+        .text-container {
+            color: white;
+            display: flex;
+            flex-direction: column;
+            font-family: 'Fjord One', serif;
+            filter: grayscale(1);
+            height: 100%;
+            justify-content: center;
+            text-align: center;
+
+            .sub-text {
+                font-size: 20px;
+            }
+
+            .title {
+                font-family: 'Alex Brush', cursive;
+                font-size: 90px;
+            }
+        }
+
+        .overlay {
+            background-color: black;
+            bottom: 0;
+            left: 0;
+            opacity: .5;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+    }
+
+    .intro {
+        font-family: 'Exo 2', sans-serif;
+    }
+
+    h3 {
+        font-size: 56px;
+        margin-bottom: 48px;
+    }
+
+    h4 {
+        font-size: 28px;
+        margin-bottom: 48px;
+    }
+
+    p {
+        font-size: 20px;
+        padding-bottom: 24px;
+        font-weight: 300;
+    }
+
+    .side-by-side.product {
+        font-family: 'Exo 2', sans-serif;
+        color: $text-color;
+        margin-bottom: 64px;
+    }
+
+    img {
+        max-height: 600px;
+    }
+}
