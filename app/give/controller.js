@@ -3,14 +3,9 @@ import { catalog } from 'beejoyfullyyou/utils/catalog';
 
 export default Controller.extend({
 
-    /**
-       Ember overridden method to initialize __.
-       @method init
-       @return {void}
-    */
-    init: function() {
-        this._super(...arguments);
-
-        this.set('catalog', catalog);
+    actions: {
+        goToGiftCard: function() {
+            window.location.replace('https://squareup.com/gift/DGMS7GE5KYQ6J/order');
+        },
     },
 });

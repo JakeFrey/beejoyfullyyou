@@ -25,7 +25,7 @@ export default Controller.extend({
        @return {void}
     */
     handleResize: function() {
-        const mobileWidth = 700;
+        const mobileWidth = 885;
 
         if (!(this.get('isDestroyed') || this.get('isDestroying'))) {
             this.set('mobileScreen', $(window).width() <= mobileWidth);

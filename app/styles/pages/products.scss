@@ -9,6 +9,10 @@
         width: 100%;
     }
 
+    .line {
+        margin: 16px;
+    }
+
     .product-info {
         margin: auto;
         font-size: 20px;
@@ -52,6 +56,37 @@
         img:hover {
             filter: brightness(65%);
             transition: .25s;
+        }
+    }
+
+    .active-collection {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 64px;
+        margin-top: 16px;
+
+        .collection-images {
+            .active-image {
+
+                img {
+                    cursor: pointer;
+                    max-width: calc(100% - 56px);
+                    transition: opacity 1s ease-in-out;
+                }
+
+                .material-icons {
+                    cursor: pointer;
+                }
+            }
+
+            .img-row {
+                display: flex;
+                margin-top: 24px;
+
+                img {
+                    max-width: 100px;
+                }
+            }
         }
     }
 

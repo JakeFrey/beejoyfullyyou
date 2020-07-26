@@ -1,24 +1,85 @@
-<div class='centered-content'>
-    <div class='product-info'>
-        <div class='title'>
-            <h2 class={{if productLine.lowercase 'lower'}}>{{productLine.title}}</h2>
-        </div>
-
-        <p class='product-description'>{{productLine.description}}</p>
-
-        {{#if productLine.price}}<p class='price'>Price: ${{productLine.price}}</p>{{/if}}
-    </div>
-    <div class='line'></div>
-
-    <div class='product-grid'>
-        {{#each productLine.products as |product|}}
-            <div class='product'>
-                <img src={{concat '/assets/images/catalog/' productLine.name '/' product}}
-                     {{action set 'activeProduct' product}}/>
+{{#if productLine}}
+    <div class='centered-content'>
+        <div class='product-info'>
+            <div class='title'>
+                <h2 class={{if productLine.lowercase 'lower'}}>{{productLine.title}}</h2>
             </div>
-        {{/each}}
+
+            <p class='product-description'>{{productLine.description}}</p>
+
+            {{#if productLine.price}}<p class='price'>Price: ${{productLine.price}}</p>{{/if}}
+    
+            {{#if productLine.moreInfo}}
+                {{#link-to 'learn-more' productLine.name class='bbutton'}}Learn more{{/link-to}}
+            {{/if}}
+        </div>
+        <div class='line'></div>
+    
+        <div class='product-grid'>
+            {{#each productLine.products as |product|}}
+                <div class='product'>
+                    <img src={{concat '/assets/images/catalog/' productLine.name '/' product}}
+                         {{action set 'activeProduct' product}}/>
+                </div>
+            {{/each}}
+        </div>
     </div>
-</div>
+{{else}}
+    <div class='centered-content'>
+        <div class='product-info'>
+            <div class='title'>
+                <h2 class={{if productLine.lowercase 'lower'}}>Limited Edition</h2>
+            </div>
+
+            <p class='product-description'>
+                These dreamy products are special, seasonal and only available while supplies last. Grab it before they're gone!
+            </p>
+    
+            {{#if false}}
+                {{#link-to 'learn-more' productLine.name class='bbutton'}}Learn more{{/link-to}}
+            {{/if}}
+        </div>
+        <div class='line'></div>
+
+        {{#if activeCollection}}
+            <button onClick={{action set 'activeCollection' null}}>Back</button>
+            <div class='active-collection'>
+                <div class='collection-images'>
+                    <div class='active-image'>
+                        <i class='material-icons back-button' {{action 'previousCollectionImage'}}>navigate_before</i>
+                        <img src={{concat '/assets/images/catalog/limited_edition/' activeCollection.imgName '/' (if activeCollectionImage activeCollectionImage activeCollection.images.[0]) '.jpg'}}
+                             {{action 'nextCollectionImage'}}/>
+                        <i class='material-icons next-button' {{action 'nextCollectionImage'}}>navigate_next</i>
+                    </div>
+                    <div class='img-row'>
+                        {{#each activeCollection.images as |image|}}
+                            <div class='product'>
+                                <img src={{concat '/assets/images/catalog/limited_edition/' activeCollection.imgName '/' image '.jpg'}}
+                                     {{action set 'activeCollectionImage' image}}/>
+                            </div>
+                        {{/each}}
+                    </div>
+                </div>
+
+                <div class='info'>
+                    <h2>{{activeCollection.title}}</h2>
+                    <p>${{activeCollection.price}}</p>
+
+                    {{{activeCollection.description}}}
+                </div>
+            </div>
+        {{else}}
+            <div class='product-grid'>
+                {{#each limitedEditionCollections as |collection|}}
+                    <div class='product'>
+                        <img src={{concat '/assets/images/catalog/limited_edition/' collection.imgName '/' collection.imgName '.jpg'}}
+                             {{action set 'activeCollection' collection}}/>
+                    </div>
+                {{/each}}
+            </div>
+        {{/if}}
+    </div>
+{{/if}}
 
 {{#if activeProduct}}
     <div class='overlay'></div>

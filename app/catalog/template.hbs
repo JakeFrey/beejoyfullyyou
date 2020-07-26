@@ -10,6 +10,15 @@
     <div class='line'></div>
 
     <div class='product-grid'>
+        {{!-- Start with limited edition (need to figure out if this is a standard product line or not) --}}
+        {{#link-to 'products' 'limited_edition'}}
+            <div class='img-overlay'>
+                <div class='text'>Limited Edition</div>
+                <div class='sub text'>While supplies last</div>
+            </div>
+         <img src={{concat '/assets/images/catalog/product_lines/' 'lipsense.jpg'}}/>
+        {{/link-to}}
+
         {{#each catalog as |productLine|}}
             {{#link-to 'products' productLine.name}}
                 <div class='img-overlay'>

@@ -1,24 +1,15 @@
-<div class='centered-content'>
-    <div class='title'>
-        <h2>Welcome to SeneGence</h2>
-    </div>
-
-    <p class='catalog-description'>
-        All SeneGence<sup>®</sup> products have a “Love It Guarantee” so there’s absolutely no risk to trying them!
-    </p>
-
-    <div class='line'></div>
-
-    <div class='product-grid'>
-        {{#each catalog as |productLine|}}
-            {{#link-to 'products' productLine.name}}
-                <div class='img-overlay'>
-                    <div class='text'>{{{productLine.mainImageText}}}</div>
-                    <div class='sub text'>by SeneGence</div>
-                </div>
-
-                <img src={{concat '/assets/images/catalog/product_lines/' productLine.mainImage}}/>
-            {{/link-to}}
-        {{/each}}
-    </div>
+<div class='title'>
+    <h2>Give a gift card!</h2>
 </div>
+
+<div class='line'></div>
+
+<section class='centered-content'>
+    <img src='/assets/images/utils/gift_card.jpg'/>
+</section>
+
+<section class='centered-content'>
+    <p>Whether you are celebrating or sending something just because, a gift card is a great option! With a wide variety of cards to choose from, send one to them right away or schedule a date you would like them to receive it.</p>
+</section>
+
+<button class='bbutton' onClick={{action 'goToGiftCard'}}>Purchase gift cards</button>
