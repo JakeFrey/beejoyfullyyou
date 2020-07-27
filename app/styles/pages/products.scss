@@ -67,6 +67,7 @@
         border: 0;
         display: flex;
         margin-left: 16px;
+        margin-right: auto;
 
         i {
             margin-right: 8px;
@@ -81,6 +82,8 @@
 
         .collection-images {
             .active-image {
+                align-items: center;
+                display: flex;
 
                 img {
                     cursor: pointer;

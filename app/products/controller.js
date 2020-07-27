@@ -33,7 +33,7 @@ export default Controller.extend({
     limitedEditionCollections: [
         {
             title: 'California Dreamin’ LipSense Collection',
-            description: '<p>This Limited Edition Collection includes:</p><ul><li>Sunshine LipSense</li><li>Boysenberry LipSense</li><li>Citrus Grove Gloss</li><li>Ooops! Lip Color Remover – Free!</li><li>Mint Glitter Bag – Free!</li></ul><p>*All colors can be purchased individually (LipSense $25, gloss $20)</p>',
+            description: '<p>This Limited Edition Collection includes:</p><ul><li>Sunshine LipSense ($25)</li><li>Boysenberry LipSense ($25)</li><li>Citrus Grove Gloss ($20)</li><li>Ooops! Lip Color Remover – Free!</li><li>Mint Glitter Bag – Free!</li></ul><p>*All colors can be purchased individually</p>',
             imgName: 'california_dreaming',
             images: [ 'california_dreaming', 'description', 'sunshine', 'boysenberry', 'citrus_grove' ],
             price: 70,
@@ -48,14 +48,14 @@ export default Controller.extend({
         },
         {
             title: 'Satin Matte Nude Gloss Collection',
-            description: '<p>This Limited Edition Collection includes:</p><ul><li>Bella Matte Gloss</li><li>Cream Matte Gloss</li><li>Hazel Matte Gloss</li><li>Praline Matte Gloss</li><li>Brown Glitter Bag – Free!</li></ul><p>*All colors can be purchased for $20 individually</p>',
+            description: '<p>This Limited Edition Collection includes:</p><ul><li>Bella Matte Gloss</li><li>Cream Matte Gloss</li><li>Hazel Matte Gloss</li><li>Praline Matte Gloss</li><li>Brown Glitter Bag – Free!</li></ul><p>*All colors can be purchased individually for $20</p>',
             imgName: 'satin_matte',
             images: [ 'satin_matte', 'description', 'bella_matte', 'cream_matte', 'hazel_matte', 'praline_matte' ],
             price: 80,
         },
         {
             title: 'In Bloom Collection',
-            description: '<p>This Limited Edition Collection includes:</p><ul><li>Red Lantern LipSense</li><li>Cherry Blossom Gloss</li><li>Moonbeam Shimmer ShadowSense</li><li>Ooops! Lip Color Remover – Free!</li><li>Metallic White Bag – Free!</li></ul><p>*All items can be purchased individually</p>',
+            description: '<p>This Limited Edition Collection includes:</p><ul><li>Red Lantern LipSense ($25)</li><li>Cherry Blossom Gloss ($20)</li><li>Moonbeam Shimmer ShadowSense ($22)</li><li>Ooops! Lip Color Remover – Free!</li><li>Metallic White Bag – Free!</li></ul><p>*All items can be purchased individually</p>',
             imgName: 'in_bloom',
             images: [ 'in_bloom', 'red_lantern', 'cherry_blossom', 'moonbeam_shimmer' ],
             price: 67,
@@ -63,7 +63,7 @@ export default Controller.extend({
         },
         {
             title: 'Mini Pearlizer Get Glowing Collection',
-            description: '<p>This Limited Edition Collection includes:</p><ul><li>Moonstone Mini Pearlizer</li><li>Firefly Mini Pearlizer</li><li>Ember Mini Pearlizer</li><li>Clear Holographic Bag – Free!</li></ul><p>*All colors can be purchased for $30 individually</p>',
+            description: '<p>This Limited Edition Collection includes:</p><ul><li>Moonstone Mini Pearlizer</li><li>Firefly Mini Pearlizer</li><li>Ember Mini Pearlizer</li><li>Clear Holographic Bag – Free!</li></ul><p>*All colors can be purchased individually for $30</p>',
             imgName: 'get_glowing',
             images: [ 'get_glowing', 'moonstone', 'firefly', 'ember' ],
             price: 90,
