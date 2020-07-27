@@ -6,6 +6,8 @@
     text-align: center;
 
     .centered-content {
+        display: flex;
+        flex-direction: column;
         width: 100%;
     }
 
@@ -59,6 +61,18 @@
         }
     }
 
+    .collection-back-button {
+        align-items: center;
+        background-color: white;
+        border: 0;
+        display: flex;
+        margin-left: 16px;
+
+        i {
+            margin-right: 8px;
+        }
+    }
+
     .active-collection {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -81,12 +95,28 @@
 
             .img-row {
                 display: flex;
+                flex-wrap: wrap;
+                margin-left: 26px;
                 margin-top: 24px;
+                max-width: 488px;
 
                 img {
-                    max-width: 100px;
+                    cursor: pointer;
+                    max-width: 97px;
                 }
             }
+        }
+    }
+
+    .collection-info {
+        .price {
+            font-size: 18px;
+        }
+
+        .description {
+            font-size: 18px;
+            line-height: 36px;
+            text-align: start;
         }
     }
 
@@ -146,6 +176,22 @@
     @media (max-width: (1100px)) {
         .product-grid {
             grid-template-columns: repeat(2, minmax(min-content, 500px));
+        }
+    }
+
+    // For limited edition page, split to one column
+    @media (max-width: (1000px)) {
+        .active-collection {
+            grid-template-columns: minmax(300px, 488px);
+            margin: auto;
+
+            .collection-info {
+                margin-top: 32px;
+            }
+
+            .img-row {
+                max-width: 500px;
+            }
         }
     }
 

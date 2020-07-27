@@ -42,7 +42,10 @@
         <div class='line'></div>
 
         {{#if activeCollection}}
-            <button onClick={{action set 'activeCollection' null}}>Back</button>
+            <button class='bbutton collection-back-button' onClick={{action set 'activeCollection' null}}>
+                <i class='material-icons back-button' {{action 'previousCollectionImage'}}>navigate_before</i>
+                Back
+            </button>
             <div class='active-collection'>
                 <div class='collection-images'>
                     <div class='active-image'>
@@ -61,11 +64,11 @@
                     </div>
                 </div>
 
-                <div class='info'>
+                <div class='collection-info'>
                     <h2>{{activeCollection.title}}</h2>
-                    <p>${{activeCollection.price}}</p>
+                    <p class='price'>${{activeCollection.price}} {{#if activeCollection.value}} (${{activeCollection.value}} value){{/if}}</p>
 
-                    {{{activeCollection.description}}}
+                    <div class='description'>{{{activeCollection.description}}}</div>
                 </div>
             </div>
         {{else}}

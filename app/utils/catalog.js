@@ -8,6 +8,9 @@ export const catalog = [
         mainImageText: 'LipSense',
         mainImage: 'lipsense.jpg',
         products: [
+            'boysenberry.jpg',
+            'sunshine.jpg',
+            'red_lantern.jpg',
             'apple_cider.jpg',
             'lexie_beary.jpg',
             'aussie_rose.jpg',
@@ -69,6 +72,12 @@ export const catalog = [
         mainImageText: 'Gloss',
         mainImage: 'gloss.jpg',
         products: [
+            'citrus_grove.jpg',
+            'bella_matte.jpg',
+            'cream_matte.jpg',
+            'hazel_matte.jpg',
+            'praline_matte.jpg',
+            'cherry_blossom.jpg',
             'Bouganvilla.jpg',
             'Opal.jpg',
             'Pink Sand.jpg',
@@ -91,6 +100,10 @@ export const catalog = [
         mainImageText: 'ShadowSense',
         mainImage: 'shadowsense.jpg',
         products: [
+            'desert_rose.jpg',
+            'sunbaked_shimmer.jpg',
+            'sea_breeze_shimmer.jpg',
+            'moonbeam_shimmer.jpg',
             'amethyst.jpg',
             'pink_opal_shimmer.jpg',
             'candlelight.jpg',
@@ -153,6 +166,9 @@ export const catalog = [
         mainImageText: 'MakeSense Foundation',
         mainImage: 'foundation.jpg',
         products: [
+            'moonstone.jpg',
+            'firefly.jpg',
+            'ember.jpg',
             'Adobe.jpg',
             'Creme Beige.jpg',
             'Pearlizer.jpg',
