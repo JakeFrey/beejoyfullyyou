@@ -8,6 +8,9 @@ export const catalog = [
         mainImageText: 'LipSense',
         mainImage: 'lipsense.jpg',
         products: [
+            'big_apple.jpg',
+            'broadway_bronze.jpg',
+            'manhattan_mauve.jpg',
             'boysenberry.jpg',
             'sunshine.jpg',
             'red_lantern.jpg',
@@ -72,6 +75,7 @@ export const catalog = [
         mainImageText: 'Gloss',
         mainImage: 'gloss.jpg',
         products: [
+            'brooklyn.jpg',
             'citrus_grove.jpg',
             'bella_matte.jpg',
             'cream_matte.jpg',

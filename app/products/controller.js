@@ -7,6 +7,8 @@ export default Controller.extend({
         this.set('activeProduct', null);
         this.set('activeCollection', null);
         this.set('activeCollectionImage', null);
+
+        window.scrollTo(0, 0);
     },
 
     productType: null,
@@ -27,10 +29,19 @@ export default Controller.extend({
     }.observes('activeProduct'),
 
     resetActiveCollectionImage: function() {
+        window.scrollTo(0, 0);
         this.set('activeCollectionImage', null);
     }.observes('activeCollection'),
 
     limitedEditionCollections: [
+        {
+            title: 'Big City Collection',
+            description: '<p>This Limited Edition Collection includes:</p><ul><li>Big Apple LipSense ($25)</li><li>Broadway Bronze LipSense ($25)</li><li>Manhattan Mauve LipSense ($25)</li><li>Brooklyn Gloss ($20)</li><li>Ooops! Lip Color Remover – Free!</li><li>Burgundy Metallic Bag – Free!</li></ul><p>*All colors can be purchased individually</p>',
+            imgName: 'big_city',
+            images: [ 'big_city', 'description', 'big_apple', 'broadway_bronze', 'manhattan_mauve', 'brooklyn' ],
+            price: 95,
+            value: 110,
+        },
         {
             title: 'California Dreamin’ LipSense Collection',
             description: '<p>This Limited Edition Collection includes:</p><ul><li>Sunshine LipSense ($25)</li><li>Boysenberry LipSense ($25)</li><li>Citrus Grove Gloss ($20)</li><li>Ooops! Lip Color Remover – Free!</li><li>Mint Glitter Bag – Free!</li></ul><p>*All colors can be purchased individually</p>',
