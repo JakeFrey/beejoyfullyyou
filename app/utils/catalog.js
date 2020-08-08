@@ -104,6 +104,13 @@ export const catalog = [
         mainImageText: 'ShadowSense',
         mainImage: 'shadowsense.jpg',
         products: [
+            'brownstone_shimmer.jpg',
+            'bright_lights_glitter.jpg',
+            'burgundy.jpg',
+            'fiery_coral_shimmer.jpg',
+            'plasma_pink.jpg',
+            'amped_up_orange.jpg',
+            'neon_green_shimmer.jpg',
             'desert_rose.jpg',
             'sunbaked_shimmer.jpg',
             'sea_breeze_shimmer.jpg',
