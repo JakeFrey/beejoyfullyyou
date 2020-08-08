@@ -36,7 +36,7 @@
 
         .menu-options {
             display: grid;
-            grid-template-columns: repeat(5, 105px);
+            grid-template-columns: repeat(6, 105px);
             grid-column-gap: 8px;
             margin: auto;
             padding: 0;
@@ -159,7 +159,7 @@
     }
 
     // This is where we convert to mobile view
-    @media (max-width: (885px)) {
+    @media (max-width: (1000px)) {
         grid-template-rows: $header-height-mobile 1fr $footer-height-mobile;
 
         .header .content {

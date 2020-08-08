@@ -1,0 +1,74 @@
+.links-page {
+    display: flex;
+    flex-direction: column;
+
+    .centered-content {
+        background-image: url('images/utils/links.jpg');
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        max-width: 2000px;
+        opacity: .8;
+        position: relative;
+        width: 100%;
+
+        .overlay {
+            background-color: black;
+            bottom: 0;
+            left: 0;
+            opacity: .5;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        h2 {
+            color: white;
+            filter: grayscale(1);
+            font-family: 'Alex Brush';
+            font-size: 64px;
+            font-weight: bold;
+            line-height: 150px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .links {
+            display: grid;
+            filter: grayscale(1);
+            grid-row-gap: 16px;
+            grid-template-columns: max-content;
+            margin: auto;
+            margin-bottom: 64px;
+            text-align: center;
+
+            a {
+                border: 2px solid white;
+                border-radius: 16px;
+                color: white;
+                font-size: 22px;
+                padding: 16px;
+                text-decoration: none;
+                text-transform: uppercase;
+                transition-duration: .5s;
+
+                &:hover {
+                    background-color: #2a2a2a;
+                }
+            }
+        }
+    }
+
+    @media (max-width: (1200px)) {
+        .centered-content {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: (500px)) {
+        .centered-content .links {
+            grid-template-columns: 300px;
+        }
+    }
+}
