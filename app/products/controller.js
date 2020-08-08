@@ -35,12 +35,26 @@ export default Controller.extend({
 
     limitedEditionCollections: [
         {
-            title: 'Big City Collection',
+            title: 'Big City ShadowSense Collection',
+            description: '<p>This Limited Edition Collection includes:</p><ul><li>Brownstone Shimmer ShadowSense</li><li>Brights Lights Glitter ShadowSense</li><li>Burgundy ShadowSense</li><li>Burgundy Metallic Bag – Free!</li></ul><p>*All colors can be purchased individually for $22</p>',
+            imgName: 'big_city_shadowsense',
+            images: [ 'big_city_shadowsense', 'description', 'brownstone_shimmer', 'bright_lights_glitter', 'burgundy' ],
+            price: 66,
+        },
+        {
+            title: 'Big City LipSense Collection',
             description: '<p>This Limited Edition Collection includes:</p><ul><li>Big Apple LipSense ($25)</li><li>Broadway Bronze LipSense ($25)</li><li>Manhattan Mauve LipSense ($25)</li><li>Brooklyn Gloss ($20)</li><li>Ooops! Lip Color Remover – Free!</li><li>Burgundy Metallic Bag – Free!</li></ul><p>*All colors can be purchased individually</p>',
             imgName: 'big_city',
             images: [ 'big_city', 'description', 'big_apple', 'broadway_bronze', 'manhattan_mauve', 'brooklyn' ],
             price: 95,
             value: 110,
+        },
+        {
+            title: 'Color Surge ShadowSense Collection',
+            description: '<p>This Limited Edition Collection includes:</p><ul><li>Fiery Coral Shimmer ShadowSense</li><li>Plasma Pink ShadowSense</li><li>Amped Up Orange ShadowSense</li><li>Neon Green Shimmer ShadowSense</li><li>Neon Green Bag – Free!</li></ul><p>*All colors can be purchased individually for $22</p>',
+            imgName: 'color_surge',
+            images: [ 'color_surge', 'fiery_coral_shimmer', 'plasma_pink', 'amped_up_orange', 'neon_green_shimmer' ],
+            price: 88,
         },
         {
             title: 'California Dreamin’ LipSense Collection',
