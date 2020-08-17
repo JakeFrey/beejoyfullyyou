@@ -14,7 +14,12 @@
             {{/if}}
         </div>
         <div class='line'></div>
-    
+
+        {{#link-to 'catalog' class='bbutton navigate-back-button'}}
+            <i class='material-icons'>navigate_before</i>
+            Back
+        {{/link-to}}
+
         <div class='product-grid'>
             {{#each productLine.products as |product|}}
                 <div class='product'>

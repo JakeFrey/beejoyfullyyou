@@ -35,6 +35,14 @@ export default Controller.extend({
 
     limitedEditionCollections: [
         {
+            title: 'Everyday beauty LipSense Collection',
+            description: '<p>This Limited Edition Collection includes:</p><ul><li>Velvet LipSense</li><li>Milk Rose LipSense</li><li>Beige Cream LipSense</li><li>Matte Gloss – Free!</li><li>Ivory Organza Bag – Free!</li></ul><p>*All colors can be purchased individually for $25</p>',
+            imgName: 'everyday_beauty',
+            images: [ 'everyday_beauty', 'description', 'velvet', 'milk_rose', 'beige_cream' ],
+            price: 75,
+            value: 100,
+        },
+        {
             title: 'Big City ShadowSense Collection',
             description: '<p>This Limited Edition Collection includes:</p><ul><li>Brownstone Shimmer ShadowSense</li><li>Brights Lights Glitter ShadowSense</li><li>Burgundy ShadowSense</li><li>Burgundy Metallic Bag – Free!</li></ul><p>*All colors can be purchased individually for $22</p>',
             imgName: 'big_city_shadowsense',

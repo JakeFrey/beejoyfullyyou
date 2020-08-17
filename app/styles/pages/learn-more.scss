@@ -1,7 +1,7 @@
 .learn-more-page {
     display: flex;
     flex-direction: column;
-    padding-bottom: 24px;
+    padding: 24px 0;
 
     .title {
         background-image: url('images/catalog/product_lines/catalog_background.jpg');
@@ -9,33 +9,46 @@
         background-repeat: no-repeat;
         background-size: 600px 300px;
         color: white;
+        height: 210px;
         padding: 48px 0;
 
         h2 {
             font-family: 'Alex Brush';
-            font-size: 64px;
+            font-size: 50px;
             font-weight: bold;
-            line-height: 150px;
             margin: auto;
             text-align: center;
+            white-space: pre;
         }
     }
 
     .line {
+        margin: 16px auto;
         max-width: 1000px;
     }
 
     .centered-content {
-        margin-top: 32px;
         max-width: 800px;
         color: $text-color;
+    }
+
+    .back-button {
+        align-items: center;
+        background-color: white;
+        border: 0;
+        display: flex;
+        margin-right: auto;
+
+        i {
+            margin-right: 8px;
+        }
     }
 
     h3 {
         margin-top: 20px;
     }
 
-    .bbutton {
+    .bbutton.bottom {
         margin: auto;
     }
 

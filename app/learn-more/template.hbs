@@ -1,10 +1,16 @@
 <div class='title'>
     <h2>About</h2>
+    <h2>{{productLine.title}}</h2>
 </div>
 
 <div class='line'></div>
 
 <section class='centered-content'>
+    {{#link-to 'products' productLine.name class='bbutton back-button'}}
+        <i class='material-icons'>navigate_before</i>
+        Back
+    {{/link-to}}
+
     {{#if (eq productLine.name 'lipsense')}}
         <h3>BENEFITS</h3>
         <p>LipSense is the premier product of SeneGence and is unlike any conventional lipstick, stain or color. As the original long-lasting lip color, it is waterproof, does not kiss-off, smear-off, rub-off or budge-off! Create your own color palette by combining shades. Your customized look will last even longer and your lips will stay moist and plump with LipSense Moisturizing Gloss.</p>
@@ -53,9 +59,143 @@
         <h3>COLOR PIGMENTS</h3>
         <p>Each tube of color has a varied formulation and mixture of color pigments to arrive at a specific color. Some colors naturally last longer than others because of the different body chemistry of each wearer, plus some colors are thicker or richer in color pigmentations, while others are sheer and thinner.</p>
 
+    {{else if (eq productLine.name 'gloss')}}
+        <h3>BENEFITS</h3>
+        <p>Dehydrated and damaged lips are no match for the moisturizing ability of Shea Butter, a natural ingredient used as the base for the many textures of LipSense® Glosses. Choose from glossy, pearl, matte or shimmering finishes. Moisturizing glosses improve the longevity of LipSense® Liquid Lip Color.</p>
 
+        <h3>DETAILS</h3>
+        <p>LipSense® Gloss</p>
+        <p>Moisturizing Glosses not only cover and protect naked lips but also improve the longevity (staying power) of LipSense® Liquid Lip Color. Gloss provides exceptional protection from the elements and helps repair dry, damaged, chapped and/or sensitive lips.</p>
 
+        <h3>THE SCIENCE BEHIND THE PRODUCT</h3>
+        <p>Shea butter, a natural ingredient, is used as the key ingredient for the many textures of LipSense® Glosses. The moisturizing properties are delivered to the delicate lip tissue while the beeswax seals the moisture in and helps to prevent moisture loss throughout the day.</p>
+
+        <h3>APPLICATION TECHNIQUES</h3>
+        <p>After applying LipSense® Liquid Lip Color, apply any LipSense® Gloss. Moisturizing gloss should be reapplied throughout the day at any time that the lips tend to feel dry. Reapply as needed. Reapplying the gloss will also increase the staying power of the lip color. Apply to lips before bedtime to protect and moisturize while sleeping. </p>
+
+        <h3>KEY INGREDIENTS AND BENEFITS</h3>
+        <p>LipSense® Glosses are made of a combination of ingredients. Here are a few key components:</p>
+        <ul>
+            <li>Butyrospermum Parkii (Shea Butter) – The scientific name for shea butter, considered as a plant lipid. Lipids are the oil and fat components of skin that prevent moisture evaporation from the skin and provide lubrication to the skin's surface. Lipids are considered as a natural moisturizer.</li>
+            <li>Tocopheryl (and Tocopheryl Acetate) – Vitamin E, essential for maintaining the activities of enzymes in the cells and for the formation of red blood cells. Vitamin E is an anti-oxidant and has been shown to inhibit skin cancer and aid in the healing of skin ailments. Vitamin E is a dynamic weapon against premature aging and combating wrinkles by neutralizing free radicals to stop the chain reaction of molecular damage and to protect the skin against oxidation. It's also believed to protect skin from the sun's ultraviolet rays once absorbed into the skin.</li>
+            <li>Propylparaben – Has anti-fungal and anti-microbial properties that help to prevent mold in products. It is non-toxic and non-irritating to the skin.</li>
+            <li>Synthetic Beeswax: A highly refined thickening agent used for its emollient properties that creates a coating over the lips to help seal in moisture.</li>
+        </ul>
+
+    {{else if (eq productLine.name 'shadowsense')}}
+        <h3>BENEFITS</h3>
+        <p>Experience the long-lasting, anti-aging and flawless finish of ShadowSense® with SenePlex® Complex. Creme to Powder shades can be used as a soft eyeliner, worn separately, layered to accent, contour and highlight, or mixed to create an endless color spectrum of possibilities.</p>
+
+        <h3>APPLICATION TECHNIQUES</h3>
+        <p>ShadowSense should be applied to eyelids by gently blending with a sponge tip or eye brush applicator. ShadowSense shades are removed by using liquid Fooops!® SenseCosmetics Color Remover.</p>
+
+        <h3>DETAILS</h3>
+        <p>The long-lasting capabilities of ShadowSense with SenePlex® are set up via the SeneDerm® SkinCare System and MakeSense® Foundation with SenePlex. Both creamy SenseCosmetics® ShadowSense formulas are nourished with the same proprietary anti-aging formulation and advanced color technology as the MakeSense Foundation with SenePlex, and of course offer another layer of SenePlex to the very delicate eye area most prone to wrinkling. ShadowSense with SenePlex Cream to Powders are thicker than the consistency of MakeSense Foundation, and of course dry to a powder to leave a denser eye color expression.</p>
+
+        <h3>KEY INGREDIENTS AND BENEFITS</h3>
+        <p>ShadowSense is made of a combination of ingredients. Here are a few key components:</p>
+        <ul>
+            <li>SenePlex Complex: Kinetic enzyme that increases cellular renewal.</li>
+            <li>Cymbidium Grandifloum (Orchid) Flower Extract: a plant native to the South Pacific, which has long been a source of excellence for the preparation of emollient products. This powerful anti-oxidant provides free-radical protection and maximum moisturization. The Cymbidium Grandifloum (Orchid) Flower Extract is very effective as a sunscreen.</li>
+            <li>Algae (Seaweed) Extract: hydrates, protects skin from the sun, and softens the skin. It is essential in the penetration of the top layer of the stratum corneum and enhances the skin’s ability to repair itself.</li>
+            <li>Tocopheryl (and Tocopheryl Acetate): Vitamin E, essential for maintaining the activities of enzymes in the cells and for the formation of red blood cells, is also an anti-oxidant and has been shown to inhibit skin cancer and aid in the healing of skin ailments. Vitamin E is a dynamic weapon against premature aging and combating wrinkles by neutralizing free radicals to stop the chain reaction of molecular damage and to protect the skin against oxidation. It’s also believed to protect skin from the sun’s ultraviolet rays once absorbed into skin.</li>
+            <li>Retinyl Palmitate: It is fundamental for increasing skin elasticity and thickening of the epidermis and the dermis. Vitamin A plays an important role in RNA synthesis, known for its cellular renewal properties that speed up exfoliation to reveal younger, plumper skin cells. This process of cell renewal and exfoliation helps to reduce the appearance of fine lines, wrinkles, and skin irregularities. Medical studies indicate that Vitamin A is effective in slowing down skin aging and in reducing the number and depth of wrinkles. A regression of pigmented spots has been demonstrated in medical studies with regular use of Vitamin A.</li>
+            <li>Yeast Extract: a source of folic acid (a member of the vitamin B complex) that aids in formation of new healthy tissues and promotes new cell formation.</li>
+            <li>Glucosamine HCL: enhances the body’s ability to manufacture collagen.</li>
+        </ul>
+
+     {{else if (eq productLine.name 'cctm')}}
+        <h3>BENEFITS</h3>
+        <p>Enjoy sheer coverage, color correction benefits and skin protection in one easy step. Swipe on this smooth cream with light to medium color coverage over moisturizer and under foundation, if more coverage is desired. It works to counteract redness and decrease sun and age spots while offering a mechanical shield of sun protection. Suitable for all skin types, including acne-prone.</p>
+
+        <h3>THE SCIENCE BEHIND THE PRODUCT</h3>
+        <p>MakeSense® Color Correcting Tinted Moisturizer is a virtually weightless tinted moisturizer that has been formulated with Yellow/Green/Mint color pigments that help to eliminate ruddiness of rosacea or the inflamed red areas of blemish prone skin. For those who desire a ‘barely there’ light and fresh even skin tone and at the same time eliminate red tones, our “CC” cream is the perfect, advanced skin care solution as it can be worn alone or as a first coat. Either way, the Arnica within the formula acts as a fungicide that helps to eliminate free radicals from the atmosphere and germs that are found naturally proliferated as a result of blemishes.</p>
+
+        <p>For additional long lasting coverage after application of MakeSense® Color Correcting Tinted Moisturizer apply a layer of MakeSense Foundation® shade of choice. Whether using MakeSense® Color Correcting Tinted Moisturizer alone or with another MakeSense Foundation® shade, skin will be protected from harmful rays with a mechanical shield. Antioxidants and peptides provide anti-aging benefits along with SenePlex® Complex that fights fine lines, wrinkles, and firms the skin.</p>
+
+        <h3>APPLICATION TECHNIQUES</h3>
+        <p>Apply to clean skin following SeneDerm® and SeneDerm® Solutions treatment regimen . For Smooth Natural Look: spread evenly over entire face to eliminate ruddiness. For Blemish Prone Skin: spread over affected areas to help eliminate blemishes and even skin tone then follow with another layer of MakeSense Foundation® for more coverage if so desired. To remove: use Fooops® Facial Makeup Remover.</p>
+
+        <h3>KEY INGREDIENTS AND BENEFITS</h3>
+        <ul>
+            <li>SenePlex Complex®: Kinetic enzyme that increases cellular renewal.</li>
+            <li>Arnica Montana Flower Extract: made-up of many components, including flavonoids, Silicic Acid, cartonoids and essential oils. The extract from this plant serves as a fungicide and as an immune-stimulant. Medically, Arnica is used externally as an application for bruises, sprains, stings or wounds. Also used after traumatic injuries. In body care Arnica provides a layer of warmth and helps to soothe tired and tight muscles.</li>
+            <li>Camellia Sinensis (Tea) Leaf Extract: Protects collagen from being broken down. Studies have shown it also works to reduce UV induced inflammations.</li>
+            <li>Yellow Iron Oxides (Mint/Green): Pigment shade that helps to camouflage redness.</li>
+            <li>Caprylhydroxamic Acid: has excellent efficacy of fungistatic agents. It is the only organic acid which can maintain unionized state in acid to neutral, strong inhibitory mold and it can take the place of traditional preservatives when applied to the cosmetic.</li>
+            <li>Titanium Dioxide (CI 77891): an inert earth mineral used as a thickening ingredient and sunscreen in cosmetics. It protects skin from UVA and UVB radiation and is considered to have no risk of skin irritation.</li>
+            <li>Phenethyl Alcohol: an aromatic alcohol. It occurs widely in nature, being found in a variety of essential oils, including rose, carnation, hyacinth, Aleppo pine, orange blossom, ylang-ylang, geranium, neroli, and champaca. It is also an auto antibiotic.</li>
+            <li>Retinyl Palmitate (Vitamin A): Vitamin A, it is fundamental for increasing skin elasticity and thickening of the epidermis and the dermis. Vitamin A plays an important role in RNA synthesis, known for its cellular renewal properties that speed up exfoliation to reveal younger, plumper skin cells which produces new and healthy cells in the skin and the body, This process of cell renewal and exfoliation helps to reduce the appearance of fi ne lines, wrinkles, and skin irregularities. Medical studies indicate that Vitamin A is effective in slowing down skin aging and in reducing the number and depth of wrinkles. A regression of pigmented spots has been demonstrated in medical studies with regular use of Vitamin A.</li>
+            <li>DL Panthenol (Vitamin B): essential for formation of new healthy tissues.</li>
+            <li>Tetrahexyldecyl Ascorbate (Vitamin C): an inert earth mineral used as a thickening ingredient and sunscreen in cosmetics. It protects skin from UVA and UVB radiation and is considered to have no risk of skin irritation.</li>
+            <li>Tocopheryl Acetate (Vitamin E): Vitamin E, essential for maintaining the activities of enzymes in the cells and for the formation of red blood cells, is also an anti-oxidant and has been shown to inhibit skin cancer and aid in the healing of skin ailments. Vitamin E is a dynamic weapon against premature aging and combating wrinkles by neutralizing free radicals to stop the chain reaction of molecular damage and to protect the skin against oxidation. It’s also believed to protect skin from the sun’s ultraviolet rays once absorbed into the skin.</li>
+            <li>Orchis Mascula (Orchid) Flower Extract: used as a preparation of emollient products. This powerful anti-oxidant provides free-radical protection and maximum moisturize. The orchid extract is very effective as a sunscreen.</li>
+            <li>Simmondsia Chinensis (Jojoba) Seed Extract: acts as a moisturizer and emollient agent to improve the skin elasticity and suppleness, containing natural Tocopherol to minimize oxidation and lipid peroxidation. Spirulina Maxima Extract: Hydrating, skin-conditioning, and toning agent.</li>
+        </ul>
+
+     {{else if (eq productLine.name 'makesense')}}
+        <h3>BENEFITS</h3>
+        <p>MakeSense Original Foundation® is oil-free and water-resistant. This long-lasting formula can be used on any skin type and provides a mechanical shield equivalent to an SPF 30 when applied after our Daytime Moisturizer and anti-aging protection from SenePlex Complex™. Each shade works with multiple skin tones as it adapts to your skin's pigmentation.</p>
+
+        <h3>DETAILS</h3>
+        <p>MakeSense Foundation with SenePlex® combines cosmetics with skincare to give you an impeccably flawless finish.</p>
+
+        <h3>THE SCIENCE BEHIND THE PRODUCT</h3>
+        <p>MakeSense Foundation with SenePlex also provides and offers an unprecedented mechanical shield for protection throughout the day. The application of a MakeSense Foundation with SenePlex layered on top of any SeneDerm® DayTime Moisturizer gives your skin the benefits of a mechanical shield by boosting the SPF 15 of the moisturizer, so that when combined it produces a mechanical shield that delivers protection the equivalency of an SPF 30.</p>
+
+        <h3>APPLICATION TECHNIQUES</h3>
+        <p>After applying MakeSense Foundation® with blending brush or sponge to each area of face, blend evenly. Blend up and out to hairlines, extend down to throat and inward towards nose and over eyelids. To remove MakeSense Foundation®, use specifically formulated Fooops!® SenseCosmetic® Liquid Color Remover.</p>
+
+        <h3>MAKESENSE FOUNDATION WITH SENEPLEX FORMULATIONS IS:</h3>
+        <ul>
+            <li>Non-smearing, long-lasting coverage.</li>
+            <li>Oil free - can be used on any skin type.</li>
+            <li>Non-comedogenic - does not clog pores.</li>
+            <li>Adapts to skin pigmentation – versatile in that one skin color may be able to use a range of up to three different shades (or vice-versa for tanning) because of the way the color pigments adapt to skin tones.</li>
+            <li>Helps to reduce moisture loss.</li>
+            <li>Provides another layer of SenePlex Complex.</li>
+            <li>Water-resistant</li>
+        </ul>
+
+        <h3>KEY INGREDIENTS AND BENEFITS</h3>
+        <p>The uniqueness of this foundation is not only in its content but also in what it does NOT contain. Ingredients utilized in the foundation include minerals and do not contain oils, emulsifiers, waxes, stearates (salts), fatty, alcohols, or sulfates.</p>
+        <ul>
+            <li>SenePlex Complex – Kinetic enzyme that increases cellular renewal.</li>
+            <li>Cymbidium Grandiflorum (Orchid) Flower Extract – a plant native to the South Pacific, which has long been a source of excellence for the preparation of emollient products. This powerful anti-oxidant provides free-radical protection and maximum moisturization.The Cymbidium Grandifloum (Orchid) Flower Extract is very effective as a sunscreen.</li>
+            <li>Algae (Seaweed) Extract – hydrates, protects skin from the sun, and softens the skin. It is essential in the penetration of the top layer of the stratum corneum and enhances the skin’s ability to repair itself.</li>
+            <li>Tocopheryl (and Tocopheryl Acetate) – Vitamin E, essential for maintaining the activities of enzymes in the cells and for the formation of red blood cells.</li>
+            <li>Yeast Extract – a source of folic acid (a member of the vitamin B complex) that aids in formation of new healthy tissues and promotes new cell formation.</li>
+            <li>Glucosamine HCL – enhances the body’s ability to manufacture collagen.</li>
+            <li>Cyclomethicone – a silicone that feels silky on the skin introduces moisture and is a water-binding agent that holds up well, even when the skin becomes wet.</li>
+            <li>Propylene Glycol – organic compound used as a ‘carrier’ or ‘holder’ of active ingredients that also softens skin.</li>
+        </ul>
+
+     {{else if (eq productLine.name 'blushsense')}}
+        <h3>BENEFITS</h3>
+        <p>Long-lasting, creamy BlushSense with SenePlex® provides the perfect touch of natural-looking color. The velvety cream formula smooths and blends beautifully into skin and provides a flawless finish that lasts all day. Enriched with our proprietary SenePlex Complex and beneficial vitamins and botanicals, it also provides advanced anti-aging protection and works to make skin more radiant and youthful. It is truly color that cares for your skin. Shades can be blended together to create custom colors, or used separately to highlight, define, and contour. Please refer to the current SeneGence® Beauty Book for shade selection offering.</p>
+
+        <h3>DETAILS</h3>
+        <p>BlushSense incorporates the same SenePlex Complex proprietary formulation and advanced color technology as the MakeSense® Foundation with SenePlex.</p>
+
+        <h3>THE SCIENCE BEHIND THE PRODUCT</h3>
+        <p>BlushSense adds another layer of protection and nourishment to your skin, while adding a gorgeous touch of color that helps highlight and define your features. Made with long-lasting color technology, it is water-resistant, smudge-proof, and blends beautifully with any creamy SenseCosmetics® for a natural look.</p>
+
+        <h3>APPLICATION TECHNIQUES</h3>
+        <p>Place a small amount of BlushSense® onto the cheek area, by applying just a few dots of color near the top of cheekbone. BlushSense is richly pigmented, so a little goes a long way. With a makeup brush, blender, sponge, or fingertip, blend well, down onto the apple of the cheek. Stop color just short of two finger widths to your nose and no lower than bottom of nose length. BlushSense creates a sun-kissed, healthy glow to face, and can be used to contour. BlushSense is applied on top of MakeSense Foundations®, and is removed by using Fooops SenseComsetics® Color Remover.</p>
+
+        <h3>KEY INGREDIENTS AND BENEFITS</h3>
+        <p>BlushSense is made of a combination of ingredients. Here are a few key components:</p>
+        <ul>
+            <li>SenePlex Complex®- Kinetic enzyme that increases cellular renewal.</li>
+            <li>Laminaria Digitata Extract: Algae extract. Hydrates, protects skin from the sun, and softens the skin. It is essential in the penetration of the top layer of the stratum corneum and enhances the skin’s ability to repair itself.</li>
+            <li>Glucosamine HCI- enhances the body’s ability to manufacture collagen.</li>
+            <li>Sodium Hyaluronate- a ubiquitous carbohydrate polymer that is part of the extracellular matrix. It is a humectant about 100 times more effective as a humectant than Glycerin. (It is the key water-maintaining substances in human skin. Harsh living environment and aging can cause the decrease of HA content in skin, and as a result the water maintaining ability of the skin is weakened and the skin looks dry and rough. One of the main causes of skin senility is also the decrease of polysaccharides, such as HA. The special structure characteristic of HA makes it highly moisturizing and it has a water content regulating function; additionally, its solution has high viscoelasticity and lubricity. When HA solution is applied on the surface of skin, it can form an air permeable layer and keep the skin moist and smooth. The small molecular weight HA can penetrate into dermis layer, fully combine with water, promote skin blood microcirculation and nutrient absorption and maintain normal metabolism, and as a result, it plays a role of wrinkle removing, improving one’s appearance and improving the health of the skin.</li>
+            <li>Aloe Barbadensis Leaf Juice- most known for moisturizing, soothing, and healing.</li>
+            <li>Tocopherol- Is a form of the Vitamin E family; helps to destroy free radicals.</li>
+            <li>Retinyl Palmitate- It is fundamental for increasing skin elasticity and thickening of the epidermis and the dermis. Vitamin A plays an important role in RNA synthesis, known for its cellular renewal properties that speed up exfoliation to reveal younger, plumper skin cells. This process of cell renewal and exfoliation helps to reduce the appearance of fine lines, wrinkles, and skin irregularities. Medical studies indicate that Vitamin A is effective in slowing down skin aging and in reducing the number and depth of wrinkles. A regression of pigmented spots has been demonstrated in medical studies with regular use of Vitamin A.</li>
+            <li>Panthenol- Vitamin B complex is essential for formation of new healthy tissues.</li>
+        </ul>
     {{/if}}
 </section>
 
-{{#link-to 'products' productLine.name class='bbutton'}}Back to {{productLine.title}}{{/link-to}}
+{{#link-to 'products' productLine.name class='bbutton bottom'}}Back to {{productLine.title}}{{/link-to}}

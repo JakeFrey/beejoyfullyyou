@@ -27,7 +27,6 @@
             background-size: 600px 300px;
             color: white;
             display: flex;
-            align-ites: center;
             height: 210px;
             padding: 48px 0;
 
@@ -58,6 +57,19 @@
         img:hover {
             filter: brightness(65%);
             transition: .25s;
+        }
+    }
+
+    .navigate-back-button {
+        align-items: center;
+        background-color: white;
+        border: 0;
+        display: flex;
+        margin-left: 32px;
+        margin-right: auto;
+
+        i {
+            margin-right: 8px;
         }
     }
 

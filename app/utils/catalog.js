@@ -7,7 +7,11 @@ export const catalog = [
         price: 25,
         mainImageText: 'LipSense',
         mainImage: 'lipsense.jpg',
+        moreInfo: true,
         products: [
+            'velvet.jpg',
+            'milk_rose.jpg',
+            'beige_cream.jpg',
             'big_apple.jpg',
             'broadway_bronze.jpg',
             'manhattan_mauve.jpg',
@@ -74,6 +78,7 @@ export const catalog = [
         price: 20,
         mainImageText: 'Gloss',
         mainImage: 'gloss.jpg',
+        moreInfo: true,
         products: [
             'brooklyn.jpg',
             'citrus_grove.jpg',
@@ -103,6 +108,7 @@ export const catalog = [
         price: 22,
         mainImageText: 'ShadowSense',
         mainImage: 'shadowsense.jpg',
+        moreInfo: true,
         products: [
             'brownstone_shimmer.jpg',
             'bright_lights_glitter.jpg',
@@ -161,6 +167,7 @@ export const catalog = [
         name: 'cctm',
         title: 'cctm',
         lowercase: true,
+        moreInfo: true,
         description: 'Are you ready for magic in a bottle? Enjoy a natural sheer coverage, color correcting benefits and skin protection in one easy step! CCTM works to counteract redness and decrease sun and age spots while offering a shield of sun protection!',
         price: 45,
         mainImageText: 'Color Correcting Tinted Moisturizer',
@@ -174,6 +181,7 @@ export const catalog = [
         title: 'MakeSense Foundation',
         description: 'Non-smearing, long-lasting, full coverage in a unique formula that gives a beautiful matte finish, skin care, and sun protection.',
         price: 50,
+        moreInfo: true,
         mainImageText: 'MakeSense Foundation',
         mainImage: 'foundation.jpg',
         products: [
@@ -204,6 +212,7 @@ export const catalog = [
         title: 'BlushSense',
         description: 'This velvety cream formula will help you achieve the perfect touch of natural-looking, long-lasting color. Define, highlight and contour while nourishing your skin!',
         price: 30,
+        moreInfo: true,
         mainImageText: 'BlushSense',
         mainImage: 'blushsense.jpg',
         products: [
