@@ -9,6 +9,9 @@ export const catalog = [
         mainImage: 'lipsense.jpg',
         moreInfo: true,
         products: [
+            'berry.jpg',
+            'sheer_red.jpg',
+            'amber_spice.jpg',
             'velvet.jpg',
             'milk_rose.jpg',
             'beige_cream.jpg',
@@ -80,6 +83,8 @@ export const catalog = [
         mainImage: 'gloss.jpg',
         moreInfo: true,
         products: [
+            'mystic_berry.jpg',
+            'pink_fortune.jpg',
             'brooklyn.jpg',
             'citrus_grove.jpg',
             'bella_matte.jpg',
@@ -110,6 +115,9 @@ export const catalog = [
         mainImage: 'shadowsense.jpg',
         moreInfo: true,
         products: [
+            'rust.jpg',
+            'plum_berry.jpg',
+            'twilight_shimmer.jpg',
             'brownstone_shimmer.jpg',
             'bright_lights_glitter.jpg',
             'burgundy.jpg',
