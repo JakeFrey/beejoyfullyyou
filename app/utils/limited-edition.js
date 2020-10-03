@@ -1,5 +1,12 @@
 export const limitedEditions = [
     {
+        title: "Pretty N' Pink ShadowSense Collection",
+        description: "<p>This Limited Edition Collection includes:</p><ul><li>Ballet Slipper ShadowSense</li><li>Pretty N' Pink ShadowSense</li><li>Sweet Rose Shimmer ShadowSense</li><li>Pink Organza Bag – Free!</li></ul><p>*All colors can be purchased individually for $22</p>",
+        imgName: 'pretty_n_pink',
+        images: [ 'pretty_n_pink', 'description', 'ballet_slipper', 'pretty_n_pink_shadowsense', 'sweet_rose_shimmer' ],
+        price: 66,
+    },
+    {
         title: 'Mystical Gloss Duo Collection',
         description: '<p>This Limited Edition Collection includes:</p><ul><li>Mystic Berry Gloss</li><li>Pink Fortune Gloss</li><li>Turquoise Organza Bag – Free!</li></ul><p>*Both colors can be purchased individually for $20</p>',
         imgName: 'mystical_gloss',

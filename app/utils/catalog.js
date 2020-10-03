@@ -115,6 +115,9 @@ export const catalog = [
         mainImage: 'shadowsense.jpg',
         moreInfo: true,
         products: [
+            'ballet_slipper.jpg',
+            'pretty_n_pink_shadowsense.jpg',
+            'sweet_rose_shimmer.jpg',
             'rust.jpg',
             'plum_berry.jpg',
             'twilight_shimmer.jpg',
